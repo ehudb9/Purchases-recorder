@@ -30,7 +30,6 @@ app.get('/getAllUserBuys', async (req, res) => {
 });
 
 app.post('/buy', async (req, res) => {
-  console.log(req.body)
   var {username ,userid, price} = req.body;
   const run = async () => {
     publishBuyRequest(username ,userid, price);
