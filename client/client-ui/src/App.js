@@ -45,8 +45,8 @@ const App = () => {
       .catch(error => console.error(error));
   };
 
-  const handleSeeAll = () => {
-    axios.get(`${baseUrl}/getAllUserBuys`)
+  const handleSeeAll = async () => {
+    await axios.get(`${baseUrl}/getAllUserBuys`)
       .then(response => { 
         if(response.data) {
           console.log(response.data);
@@ -76,7 +76,7 @@ const App = () => {
       }
       {
         openTable? 
-        (<Table data={data} key={Date.now()}/>)
+        (<Table data={data} />)
         : null}
 
     </div>

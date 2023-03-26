@@ -12,15 +12,15 @@ const Table = ({ data }) => {
         </tr>
       </thead>
       <tbody>
-        {console.log(data)}
-        {data.map(item => (
+        {Array.isArray(data)
+        ? data.map(item => (
           <tr key={item.timestamp}>
             <td>{item.userid}</td>
             <td>{item.username}</td>
             <td>{item.price}</td>
             <td>{item.timestamp}</td>
           </tr>
-        ))}
+        )): null}
       </tbody>
     </table>
   );

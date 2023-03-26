@@ -19,7 +19,7 @@ app.use(bodyParser.json());
 
 app.get('/getAllUserBuys', async (req, res) => {
   try {
-    const response = await axios.get("http://intrepo_customer-manager-web-server_1:4001/getAllUserBuys");
+    const response = await axios.get("http://purchases-recorder_customer-manager-web-server_1:4001/getAllUserBuys");
     // For local runnig
     // const response = await axios.get("http://localhost:4001/getAllUserBuys");
     console.log(response.data)
