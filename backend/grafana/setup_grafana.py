@@ -14,7 +14,7 @@ db_config = {
     "database": "purchases_records",
     "user": "myuser",
     "password": "mypassword",
-    "host": "intrepo_db_1",
+    "host": "purchases-recorder_db_1",
     "sslmode": "disable",
     "port": "5432"
 }

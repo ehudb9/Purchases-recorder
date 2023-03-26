@@ -23,7 +23,7 @@ dag = DAG(
 def calculate_total_spent():
     # Connect to the PostgreSQL database
     conn = psycopg2.connect(
-        host="intrepo_db_1",
+        host="purchases-recorder_db_1",
         port="5432",
         database="database",
         user="user",

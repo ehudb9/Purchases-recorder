@@ -2,7 +2,7 @@ import pg from 'pg';
 
 const client = new pg.Pool({
     user: 'myuser',
-    host: 'intrepo_db_1',
+    host: 'purchases-recorder_db_1',
     // host: 'localhost',
     database: 'purchases_records',
     password: 'mypassword',

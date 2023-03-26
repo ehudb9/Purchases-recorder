@@ -7,7 +7,7 @@ const stream = Kafka.Producer.createWriteStream({ "metadata.broker.list": "kafka
 
 const publishBuyRequest = (username ,userid, price ) => {
     const event = eventType.toBuffer({ 
-        username:username , userid:userid, price:price ,timestamp: Date.now().toString()
+        username:username.username , userid:userid.userid, price:price.price ,timestamp: Date.now().toString()
     });
     
     const res = stream.write(event);
