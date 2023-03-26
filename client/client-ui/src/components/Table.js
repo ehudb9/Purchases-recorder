@@ -2,7 +2,7 @@ import React from 'react';
 
 const Table = ({ data }) => {
   return (
-    <table className="table text-light">
+    <table className="table text-light" key={data.userid}>
       <thead>
         <tr>
           <th>UserId</th>
@@ -13,7 +13,7 @@ const Table = ({ data }) => {
       </thead>
       <tbody>
         {data.map(item => (
-          <tr key={item.userid}>
+          <tr key={Date.now()}>
             <td>{item.userid}</td>
             <td>{item.username}</td>
             <td>{item.price}</td>
