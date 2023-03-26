@@ -17,15 +17,15 @@ const App = () => {
   const baseUrl = 'http://0.0.0.0:3001';
 
   const handleUserid = (event) => {
-    setUserid(event.target.value);
+    setUserid(event.target.value.toString());
   }
 
   const handleUsername = (event) => {
-    setUsername(event.target.value);
+    setUsername(event.target.value.toString());
   }
 
   const handlePrice = (event) => {
-    setPrice(event.target.value);
+    setPrice(event.target.value.toString());
   }
 
   const handleBuy = () => {
@@ -34,6 +34,7 @@ const App = () => {
       "userid": {userid},
       "price": {price}
     };
+    alert(body.toString());
     axios.post(`${baseUrl}/buy`, body)
       .then(response => {
         setNotificationOpen(true)
@@ -74,7 +75,7 @@ const App = () => {
       }
       {
         openTable? 
-        (<Table data={data} key={Date.now()}/>)
+        (<Table data={data} />)
         : null}
 
     </div>

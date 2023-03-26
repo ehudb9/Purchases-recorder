@@ -2,8 +2,8 @@ import pg from 'pg';
 
 const client = new pg.Pool({
     user: 'myuser',
-    // host: 'intrepo_db_1',
-    host: 'localhost',
+    host: 'intrepo_db_1',
+    // host: 'localhost',
     database: 'purchases_records',
     password: 'mypassword',
     port: 5432,
