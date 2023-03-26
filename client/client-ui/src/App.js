@@ -34,6 +34,7 @@ const App = () => {
       "userid": {userid},
       "price": {price}
     };
+    
     axios.post(`${baseUrl}/buy`, body)
       .then(response => {
         setNotificationOpen(true)
@@ -48,6 +49,7 @@ const App = () => {
     axios.get(`${baseUrl}/getAllUserBuys`)
       .then(response => { 
         if(response.data) {
+          console.log(response.data);
           setData(response.data);
           setOpenTable(true);
           setNotificationOpen(false);
