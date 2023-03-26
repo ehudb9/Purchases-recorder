@@ -13,7 +13,7 @@ const Table = ({ data }) => {
       </thead>
       <tbody>
         {data.map(item => (
-          <tr key={item.userid}>
+          <tr key={Date.now()}>
             <td>{item.userid}</td>
             <td>{item.username}</td>
             <td>{item.price}</td>
