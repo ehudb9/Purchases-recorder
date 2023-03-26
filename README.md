@@ -56,7 +56,7 @@ Before installing, make sure you have installed the followind requerments
 1. Clone this repo
    ```sh
    $ https://github.com/ehudb9/Purchases-recorder.githttps://github.com/ehudb9/Purchases-recorder.git
-   $ cd billingSystemTask
+   $ cd Purchases-recorder
    ```
 2. Build Docker containers:
    ```sh
