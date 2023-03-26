@@ -3,11 +3,11 @@ console.log("kafka sender client starter");
 import Kafka from "node-rdkafka";
 import eventType from "./purchaseEvent.js";
 
-const stream = Kafka.Producer.createWriteStream({ "metadata.broker.list": "kafka:9092"}, {}, { topic: "purchases"});
+const stream = Kafka.Producer.createWriteStream({ "metadata.broker.list": "0.0.0.0:9092"}, {}, { topic: "purchases"});
 
 const publishBuyRequest = (username ,userid, price ) => {
     const event = eventType.toBuffer({ 
-        username:username , userid:userid, price:price ,timestamp: Date.now().toString()
+        username:username.username , userid:userid.userid, price:price.price ,timestamp: Date.now().toString()
     });
     
     const res = stream.write(event);

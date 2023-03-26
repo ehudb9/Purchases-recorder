@@ -38,7 +38,7 @@ app.listen(PORT, () => {
 // starting kafka consumer to get ready to recived messaging.
 const consumer = Kafka.KafkaConsumer(
     { 
-        'metadata.broker.list': 'kafka:9092',
+        'metadata.broker.list': '0.0.0.0:9092',
         'group.id': 'kafka'
     },
     {}, { topic: 'purchases'});
