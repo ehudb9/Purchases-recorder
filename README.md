@@ -36,7 +36,7 @@ Before installing, make sure you have installed the followind requerments
    ```sh
    $ docker-compose up
    ```
-   mights taske w while...
+   might take a while...
 
 4. Open the UI here:  [http://0.0.0.0:3000](http://0.0.0.0:3000)
    And start to query the system. ui migh start on diferent port. use the logs.
